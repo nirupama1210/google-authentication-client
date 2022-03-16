@@ -1,4 +1,3 @@
-
 import './App.css';
 import GoogleLogin from 'react-google-login'
 import { useState } from 'react';
@@ -12,7 +11,7 @@ function App() {
   )
 
   const handleFailure=(res)=>{
-    // console.log(res)
+    
   }
   const handleLogin = async (googleData) =>{
     const res = await fetch(process.env.REACT_APP_GOOGLE_API,{
@@ -52,7 +51,7 @@ function App() {
         onFailure={handleFailure}
         cookiePolicy={'single_host_origin'}
         >
-
+          
         </GoogleLogin>
           </div>)
         }
