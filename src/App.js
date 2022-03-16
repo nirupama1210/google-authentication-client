@@ -14,6 +14,7 @@ function App() {
     
   }
   const handleLogin = async (googleData) =>{
+    console.log(process.env.REACT_APP_GOOGLE_API)
     const res = await fetch(process.env.REACT_APP_GOOGLE_API,{
       method:'POST',
       body: JSON.stringify({
@@ -24,6 +25,7 @@ function App() {
       },
     });
     const data = await res.json()
+    console.log(data)
     setLoginData(data)
     localStorage.setItem('loginData',JSON.stringify(data))
   }
