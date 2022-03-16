@@ -12,7 +12,7 @@ function App() {
   )
 
   const handleFailure=(res)=>{
-    console.log(res)
+    // console.log(res)
   }
   const handleLogin = async (googleData) =>{
     const res = await fetch(process.env.REACT_APP_GOOGLE_API,{
@@ -44,7 +44,7 @@ function App() {
               <button className='button-login' onClick={handleLogout}>Logout</button>
             </div>
           ):
-      < div className="g-signin2">   (
+      (< div className="g-signin2">   
             <GoogleLogin
         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
         buttonText="Log in with Google"
@@ -54,7 +54,7 @@ function App() {
         >
 
         </GoogleLogin>
-          )</div>
+          </div>)
         }
         
       </div>
