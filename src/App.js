@@ -36,7 +36,7 @@ function App() {
   <div className='App'>
     <header className="App-header">
       <h1>React Google Login App</h1>  
-      <div>
+      <div >
         {
           loginData ? (
             <div>
@@ -44,7 +44,7 @@ function App() {
               <button className='button-login' onClick={handleLogout}>Logout</button>
             </div>
           ):
-          (
+      < div className="g-signin2">   (
             <GoogleLogin
         clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
         buttonText="Log in with Google"
@@ -54,7 +54,7 @@ function App() {
         >
 
         </GoogleLogin>
-          )
+          )</div>
         }
         
       </div>
